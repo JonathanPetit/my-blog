@@ -21,6 +21,6 @@ jobs:
       - name: Tag image 
         run:
           docker tag my-blog \
-          registry.digitalocean.com/my-blog
+          registry.digitalocean.com/my-blog/my-blog
       - name: Push image to DO Container Registry 
-        run: docker push registry.digitalocean.com/my-blog
+        run: docker push registry.digitalocean.com/my-blog/my-blog
