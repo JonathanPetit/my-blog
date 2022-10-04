@@ -11,7 +11,7 @@ jobs:
       - name: Checkout the repo 
         uses: actions/checkout@v2
       - name: Build image 
-        run: docker build -t sample/my-page .
+        run: docker build -t my-blog .
       - name: Install doctl 
         uses: digitalocean/action-doctl@v2
         with:
@@ -20,6 +20,6 @@ jobs:
         run: doctl registry login --expiry-seconds 600
       - name: Tag image 
         run:
-          docker tag my-blog/my-blog registry.digitalocean.com/my-blog/my-blog
+          docker tag my-blog registry.digitalocean.com/my-blog/my-blog:latest
       - name: Push image to DO Container Registry 
         run: docker push registry.digitalocean.com/my-blog/my-blog
