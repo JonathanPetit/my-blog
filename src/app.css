@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-white
+  }
+
+  .wrapper {
+    @apply px-4 md:px-14 lg:px-28
+  }
+
+  .wrapper-right {
+    @apply pr-4 md:pr-14 lg:pr-28
+  }
+
+  .wrapper-left {
+    @apply pl-4 md:pl-14 lg:pl-28
+  }
+}
