@@ -19,5 +19,5 @@ export type PostMetadata = {
 
 export type Post = {
   metadata: PostMetadata
-  content: Function
+  content: any
 }

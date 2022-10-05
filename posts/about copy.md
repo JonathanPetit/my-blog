@@ -1,5 +1,5 @@
 ---
-id: test
+id: test2
 title: test
 date: 2022-10-04
 resume: "test"

@@ -18,3 +18,9 @@ export const getPosts = (markdown: any) => {
 
   return posts
 }
+
+export const getPost = (posts: Post[], id: string) => {
+  const post: Post = posts.find(value => value.metadata.id === id)!
+
+  return post
+}

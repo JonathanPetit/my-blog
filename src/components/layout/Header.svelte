@@ -2,7 +2,7 @@
   import Socials from "@components/Socials.svelte";
 </script>
 
-<div class="bg-s wrapper">
+<div class="wrapper">
   <nav class="flex justify-between align-center py-7">
     <div class="flex items-center">
       <div>
