@@ -1,6 +1,9 @@
-import { getMarkdown, getPosts } from "@utils/posts";
+import type { Page, Post } from "@inc/type";
+import { getPostsMarkdown, getPosts } from "@utils/posts";
+import { getPagesMarkdown, getPages } from "@utils/pages";
 import { posts } from '@store/posts';
-import type { Post } from "@inc/type";
+import { pages } from "@store/pages";
+
 
 export const load = async () => {
   let postsStored: Post[] = []
@@ -9,9 +12,19 @@ export const load = async () => {
 	});
 
   if(Object.keys(postsStored).length === 0) {
-    const imports = await getMarkdown()
+    const imports = await getPostsMarkdown()
     posts.set(getPosts(imports))
   }
 
-  return { postsStored }
+  let pagesStored: Page[] = []
+  pages.subscribe(value => {
+		pagesStored = value;
+	});
+
+  if(Object.keys(pagesStored).length === 0) {
+    const imports = await getPagesMarkdown()
+    pages.set(getPages(imports))
+  }
+
+  return { postsStored, pagesStored }
 }

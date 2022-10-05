@@ -1,7 +1,7 @@
 import type { Post } from "@inc/type"
 
-export const getMarkdown = async () => {
-  const imports = await import.meta.glob('/posts/**/*.md', { eager: true })
+export const getPostsMarkdown = async () => {
+  const imports = await import.meta.glob('/content/posts/**/*.md', { eager: true })
 
   return imports
 }

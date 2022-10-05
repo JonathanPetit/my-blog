@@ -7,6 +7,9 @@
 
 <div>
   <Header />
-  <slot />
+  <div class="wrapper">
+    <slot />
+  </div>
   <Footer />
 </div>
+

@@ -9,10 +9,9 @@
 
 </script>
 
-<div class="wrapper">
-  <div class="grid gap-4 grid-cols-2">
-    {#each postsList as post, idx (idx)}
-      <PostCard metadata={post.metadata} />
-    {/each}
-  </div>
+
+<div class="grid gap-4 grid-cols-2">
+  {#each postsList as post, idx (idx)}
+    <PostCard metadata={post.metadata} />
+  {/each}
 </div>
